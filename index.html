@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Chopstick Boilerplate</title>
+
+        <meta name="description" content="An introduction to Chopstick: Jekyll boilerplate, CSS framework and Gulp workflow">
+        <meta name="author" content="Dieter Peirs">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <!-- Intro -->
+                <section>
+                    <h1>Chopstick</h1>
+                    <h3><a href="http://jekyllrb.com/">Jekyll</a> boilerplate, <a href="http://gulpjs.com/">Gulp</a> workflow and <a href="http://sass-lang.com/">SCSS</a> framework</h3>
+                    <p>
+                        <a href="https://twitter.com/GetChopstick">@GetChopstick</a>
+                    </p>
+                </section>
+                <!-- End intro -->
+
+                <!-- About me -->
+                <!-- <section>
+                    <h2>Hello There</h2>
+                    <p>
+                        <a href="https://twitter.com/DieterPeirs">@DieterPeirs</a>, designer and front-end developer <a href="https://twitter.com/vreewijs">@vreewijs</a>
+                    </p>
+                </section> -->
+                <!-- End about me -->
+
+                <!-- Overview -->
+                <section>
+                    <h2>Overview</h2>
+                    <ul class="c-list-ui">
+                        <li class="fragment c-list-ui__item">
+                            <strong><a href="#/2">Jekyll boilerplate</a></strong><br>
+                            Quickly build HTML prototypes with partials, markdown, data sets and more
+                        </li>
+                        <li class="fragment c-list-ui__item">
+                            <strong><a href="#/3">Gulp workflow</a></strong><br>
+                            Automation: local server, browser sync and file watch, js concatenation, css pre- and postprocessing
+                        </li>
+                        <li class="fragment c-list-ui__item">
+                            <strong><a href="#/4">SCSS framework</a></strong><br>
+                            Solid architecture using 'sensible' defaults, single-depth self-documenting selectors and namespaces
+                        </li>
+                    </ul>
+                </section>
+                <!-- End overview -->
+
+                <!-- Jekyll -->
+                <section>
+                    <h2>Jekyll</h2>
+                    <p>
+                        Static site generator for faster prototyping. (Ruby gem)
+                    </p>
+                    <p>
+                        Uses liquid as templating language.
+                    </p>
+                    <ul class="c-list-ui c-list-ui--small u-mT">
+                        <li class="c-list-ui__item">Some resources:</li>
+                        <li class="c-list-ui__item">
+                            <a href="http://jekyllrb.com/">Official Jekyll site</a>
+                        </li>
+                        <li class="c-list-ui__item">
+                            <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid for designers</a>
+                        </li>
+                        <li class="c-list-ui__item">
+                            <a href="http://wolfslittlestore.be/2014/01/kimono-jekyll/">Kimono + Jekyll = prototyping with real content</a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- End Jekyll -->
+
+                <!-- Gulp workflow -->
+                <section>
+                    <section>
+                        <h2>Gulp workflow</h2>
+                        <p>
+                            Build system using Node.js
+                        </p>
+                        <p>
+                            Automate all the things!
+                        </p>
+                        <ul class="c-list-ui c-list-ui--small u-mT">
+                            <li class="c-list-ui__item">Available tasks:</li>
+                            <li class="c-list-ui__item">
+                                <code>gulp</code> : Runs the default tasks (scss, js and jekyll)
+                            </li>
+                            <li class="c-list-ui__item">
+                                <code>gulp watch</code> : Launch a <a href="http://www.browsersync.io/">browser-sync</a> server and watch files for changes
+                            </li>
+                            <li class="c-list-ui__item">
+                                <code>gulp svg2png</code> : Converts 'svg' to 'png'
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <ul class="c-list-ui c-list-ui--small u-mT">
+                            <li class="c-list-ui__item">Some resources:</li>
+                            <li class="c-list-ui__item">
+                                <a href="http://gulpjs.com/">Official Gulp site</a>
+                            </li>
+                            <li class="c-list-ui__item">
+                                <a href="https://markgoodyear.com/2014/01/getting-started-with-gulp/">Getting started with Gulp</a>
+                            </li>
+                            <li class="c-list-ui__item">
+                                <a href="http://www.smashingmagazine.com/2014/06/11/building-with-gulp/">Building with Gulp</a>
+                            </li>
+                            <li class="c-list-ui__item">
+                                <a href="http://gulpfiction.divshot.io/">Gulp Fiction: online build tool</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                </section>
+                <!-- End Jekyll -->
+
+                <!-- SCSS Framework -->
+                <section>
+                    <section>
+                        <h2>SCSS Framework</h2>
+                        <p>
+                            A framework, not a UI-kit!
+                        </p>
+                        <ul class="c-list-ui c-list-ui--small u-mT">
+                            <li class="fragment c-list-ui__item">Maintain sensible defaults</li>
+                            <li class="fragment c-list-ui__item">Enforce a global and clear coding style</li>
+                            <li class="fragment c-list-ui__item">Create a scalable system for both small and big web projects</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>How?</h2>
+                        <ul class="c-list-ui c-list-ui--small u-mT">
+                            <li class="fragment c-list-ui__item">ITCSS architecture (scalable)</li>
+                            <li class="fragment c-list-ui__item">Low specificity (single-depth classes)</li>
+                            <li class="fragment c-list-ui__item">Self documenting (namespaces, BEM)</li>
+                            <li class="fragment c-list-ui__item">Open/closed principle (add via extension, not modification)</li>
+                            <li class="fragment c-list-ui__item c-list-ui__item--small">SCSS as preprocessor for variables and mixins, PostCSS(Autoprefixer) as post-processsor.</li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- End SCSS Framework -->
+
+                <!-- ITCSS architecture -->
+                <section>
+                    <section>
+                        <h2>ITCSS architecture</h2>
+                        <ul class="c-list-ui c-list-ui--small">
+                            <li class="fragment c-list-ui__item">Inverted triangle CSS =  a logical and scalable way to organise selectors</li>
+                            <li class="fragment c-list-ui__item">Uses layers that organise selectors from low specificity to high specificity</li>
+                            <li class="fragment c-list-ui__item">Naming convention: easy to find and add selectors</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Layers</h2>
+                        <ul class="c-list-ui c-list-ui--small">
+                            <li class="fragment c-list-ui__item">Settings: contains global variables and config switches</li>
+                            <li class="fragment c-list-ui__item">Tools: contains default mixins and functions</li>
+                            <li class="fragment c-list-ui__item">Generic: contains ground-zero styles (Normalize.css, resets, box-sizing)</li>
+                            <li class="fragment c-list-ui__item">Objects: contains cosmetic-free design patterns</li>
+                            <li class="fragment c-list-ui__item">Components: contains designed components, chunks of UI</li>
+                            <li class="fragment c-list-ui__item">Plugins: contains third-party plugin styles</li>
+                            <li class="fragment c-list-ui__item">Trumps: contains helpers, overrides and shame.css</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>In use</h2>
+                        <p>
+                            SCSS is used to import partials. <br>
+                            Filenames start with the layer name.
+                        </p>
+
+                        <pre>
+    <code>
+    // Example layers
+    @import "settings.global";
+    @import "tools.functions";
+    @import "generic.normalize";
+    @import "elements.page";
+    @import "objects.grid";
+    @import "components.navigation";
+    @import "plugins.googlemaps";
+    @import "trumps.widths";
+    @import "trumps.shame";
+    </code>
+                        </pre>
+                    </section>
+                </section>
+                <!-- End ITCSS architecture -->
+
+                <!-- Low specificity -->
+                <section>
+                    <section>
+                        <h2>Low specificity</h2>
+                        <p>
+                            Faster, easier to read, easier to modify and extend
+                        </p>
+                        <ul class="c-list-ui c-list-ui--small">
+                            <li class="fragment c-list-ui__item">Minimal styling of HMTL elements.</li>
+                            <li class="fragment c-list-ui__item">Absolutely no styling with ID's!</li>
+                            <li class="fragment c-list-ui__item">Only single-depth classes (no nesting)</li>
+                            <li class="fragment c-list-ui__item c-list-ui__item--small">States (eg. 'is-active') are exceptions and can be more specific</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example</h2>
+                        <div class="u-left">
+                            <h4>Scoped styles</h4>
+                            <pre>
+    <code class="hljs html">/*
+    .list-ui {
+      list-style: none;
+    }
+    .list-ui > li {
+      padding-top: 6px;
+    }
+*/
+<ul class="list-ui">
+    <li>
+        List text
+    </li>
+    <li>
+        List text
+    </li>
+</ul></code>
+                            </pre>
+                        </div>
+                        <div class="u-right">
+                            <h4>Single depth</h4>
+                            <pre>
+    <code class="hljs html">/*
+    .list-ui {
+      list-style: none;
+    }
+    .list-ui-item {
+      padding-top: 6px;
+    }
+*/
+<ul class="list-ui">
+    <li class="list-ui-item">
+        List text
+    </li>
+    <li class="list-ui-item">
+        List text
+    </li>
+</ul></code>
+                            </pre>
+                        </div>
+                    </section>
+                </section>
+                <!-- End low specificity -->
+
+                <!-- Self documenting -->
+                <section>
+                    <section>
+                        <h2>Self documenting classnames</h2>
+                        <ul class="c-list-ui c-list-ui--small">
+                            <li class="fragment c-list-ui__item">Namespaces</li>
+                            <li class="fragment c-list-ui__item">BEM (Block__element--modifier)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Namespaces</h2>
+                        <p>
+                            Prefix classnames depending their function and location in the architecture
+                        </p>
+                        <ul class="c-list-ui c-list-ui--small">
+                            <li class="fragment c-list-ui__item">Object: '<code>.o-*</code>'</li>
+                            <li class="fragment c-list-ui__item">Component: '<code>.c-*</code>'</li>
+                            <li class="fragment c-list-ui__item">Plugin (when possible): '<code>.p-*</code>'</li>
+                            <li class="fragment c-list-ui__item">Utility: '<code>.u-*</code>'</li>
+                            <li class="fragment c-list-ui__item">State: '<code>.is-*</code>' or '<code>.has-*</code>'</li>
+                            <li class="fragment c-list-ui__item">Javascript hook: '<code>.js-*</code>'</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Example</h2>
+                        <p>Objects, components and javascript hook</p>
+                        <pre>
+    <code class="hljs html">
+<ul class="o-list-ui c-nav-main js-nav">
+    <li class="o-list-ui">
+        <a href="#" class="c-nav-main-link">Navigation item</a>
+    </li>
+    <li class="o-list-ui is-active">
+        <a href="#" class="c-nav-main-link">Navigation item</a>
+    </li>
+</ul>
+
+</code>
+                        </pre>
+                    </section>
+                    <section>
+                        <h2>BEM (Block__element--modifier)</h2>
+                        <pre>
+    <code class="hljs html">
+/*
+ * .block {}
+ * .block__element {}
+ * .block--modifier {}
+ */
+
+<div class="person person--female">
+    <span class="person__hand person__hand--left">
+        Hello
+    </span>
+</div>
+
+</code>
+                        </pre>
+                    </section>
+                    <section>
+                        <h2>Example</h2>
+                        <p>
+                            Bringing it all together
+                        </p>
+                        <pre>
+    <code class="hljs html">
+<ul class="o-list o-list--horizontal c-nav-main js-nav">
+    <li class="o-list-ui__item">
+        <a href="#" class="c-nav-main__link">Navigation item</a>
+    </li>
+    <li class="o-list-ui__item is-active">
+        <a href="#" class="c-nav-main__link">Navigation item</a>
+    </li>
+</ul>
+
+</code>
+                        </pre>
+                    </section>
+                </section>
+                <!-- End self documenting -->
+
+                <!-- Open/closed principle -->
+                <section>
+                    <section>
+                        <h2>Open/closed principle</h2>
+                        <p>
+                            Add via extension, not modification!
+                        </p>
+                        <ul class="c-list-ui c-list-ui--small">
+                            <li class="fragment c-list-ui__item">Do not edit an object unless it is a bugfix</li>
+                            <li class="fragment c-list-ui__item">Do write modifiers (--modifier) on existing objects and components</li>
+                            <li class="fragment c-list-ui__item">Add new objects, new components when necessary</li>
+                            <li class="fragment c-list-ui__item">Use existing utility classes or write new ones for edge cases or quick fixes</li>
+                        </ul>
+                    </section>
+                </section>
+                <!-- End open/closed principle -->
+
+                <!-- Practical examples -->
+                <section>
+                    <section>
+                        <h2>More examples</h2>
+                        <h4>Simple grid system</h4>
+                        <pre>
+    <code class="hljs html">
+<div class="o-container">
+    <div class="o-grid o-grid--gutter">
+        <div class="o-grid__item">
+            Full column
+        </div>
+        <div class="o-grid__item">
+            Full column
+        </div>
+    </div>
+</div>
+
+</code>
+                    </section>
+
+                    <section>
+                        <h2>More examples</h2>
+                        <h4>Responsive grid system</h4>
+                        <pre>
+    <code class="hljs html">
+<div class="o-container">
+    <div class="o-grid o-grid--gutter">
+        <div class="o-grid__item u-1-of-2-bp3">
+            Half column on breakpoint 3
+        </div>
+        <div class="o-grid__item u-1-of-2-bp3">
+            Half column on breakpoint 3
+        </div>
+    </div>
+</div>
+
+</code>
+                    </section>
+
+                    <section>
+                        <h2>More examples</h2>
+                        <h4>Grid system: push columns</h4>
+                        <pre>
+    <code class="hljs html">
+<div class="o-container">
+    <div class="o-grid o-grid--gutter">
+        <div class="o-grid__item u-1-of-2-bp3 u-push-1-of-4-bp3">
+            Centered half column on breakpoint 3
+        </div>
+    </div>
+</div>
+
+</code>
+                    </section>
+
+                </section>
+
+                <section>
+                    <h2>Roadmap</h2>
+                    <ul class="c-list-ui c-list-ui--small">
+                        <li class="fragment c-list-ui__item">v0.6: add necessary/missing objects + optimize existing objects</li>
+                        <li class="fragment c-list-ui__item">v0.7: make everything modular and configurable (expose API-like CSS)</li>
+                        <li class="fragment c-list-ui__item">v0.8: add configurable components, redesign/optimize starting theme</li>
+                        <li class="fragment c-list-ui__item">v0.9: convert chopstick to a bower/npm dependency</li>
+                        <li class="fragment c-list-ui__item">...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Thanks!</h2>
+                    <p>
+                        <a href="https://github.com/getchopstick/chopstick-boilerplate">Fork it, share it, contribute!</a>
+                    </p>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>

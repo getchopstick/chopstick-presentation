@@ -1,0 +1,39 @@
+.c-list-ui {
+    list-style: none;
+    width: 100%;
+    margin-left: 0;
+}
+
+.c-list-ui--small {
+    font-size: 80%;
+}
+
+    .c-list-ui__item {
+        border-top: 1px dotted grey;
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
+    .c-list-ui__item--small {
+        font-size: 70%;
+        font-style: italic;
+    }
+
+.u-left {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+}
+
+.u-right {
+    float: left;
+    width: 49%;
+}
+
+.u-mT {
+    margin-top: 60px;
+}
