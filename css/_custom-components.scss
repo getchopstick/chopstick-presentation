@@ -9,12 +9,52 @@
 }
 
     .c-list-ui__item {
-        border-top: 1px dotted grey;
+        border-top: 1px solid #E6DAA5;
         padding-top: 12px;
         padding-bottom: 12px;
 
         &:first-child {
             border-top: 0;
+        }
+
+        a {
+          color: #DA2327;
+          text-decoration: none;
+          -webkit-transition: color 0.15s ease;
+          -moz-transition: color 0.15s ease;
+          transition: color 0.15s ease;
+          border-bottom: 1px dotted #DA2327;
+        }
+
+        a:hover {
+          color: #DA2327;
+          text-shadow: none;
+          border: none;
+        }
+
+        a:visited {
+            color: #DA2327;
+            text-decoration: none;
+            border-bottom: 1px dotted #DA2327;
+        }
+
+        .has-dark-background & {
+            border-top: 1px dotted #F23D40;
+
+            a {
+              color: #E6DAA5;
+              border-bottom: 1px dotted #E6DAA5;
+            }
+
+            a:hover {
+              color: #E6DAA5;
+            }
+
+            a:visited {
+                color: #E6DAA5;
+                text-decoration: none;
+                border-bottom: 1px dotted #E6DAA5;
+            }
         }
     }
 

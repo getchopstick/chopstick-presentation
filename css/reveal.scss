@@ -1323,3 +1323,22 @@ body {
 .reveal {
     @import "custom-components";
 }
+
+section.has-dark-background .c-list-ui__item {
+    border-top: 1px solid #F25557;
+
+    a {
+      color: #E6DAA5;
+      border-bottom: 1px dotted #E6DAA5;
+    }
+
+    a:hover {
+      color: #E6DAA5;
+    }
+
+    a:visited {
+        color: #E6DAA5;
+        text-decoration: none;
+        border-bottom: 1px dotted #E6DAA5;
+    }
+}

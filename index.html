@@ -14,8 +14,11 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+        <!-- Font -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900,400italic' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="css/theme/chopstick.css" id="theme">
 
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,12 +45,9 @@
             <div class="slides">
 
                 <!-- Intro -->
-                <section>
+                <section data-background="#DA2327">
                     <h1>Chopstick</h1>
                     <h3><a href="http://jekyllrb.com/">Jekyll</a> boilerplate, <a href="http://gulpjs.com/">Gulp</a> workflow and <a href="http://sass-lang.com/">SCSS</a> framework</h3>
-                    <p>
-                        <a href="https://twitter.com/GetChopstick">@GetChopstick</a>
-                    </p>
                 </section>
                 <!-- End intro -->
 
@@ -80,16 +80,37 @@
                 </section>
                 <!-- End overview -->
 
-                <!-- Jekyll -->
+                <!-- Dependencies -->
                 <section>
+                    <h2>Dependencies</h2>
+                    <ul class="c-list-ui">
+                        <li class="fragment c-list-ui__item">
+                            Ruby (+ <a href="https://rvm.io/">RVM</a> – Ruby version manager)
+                        </li>
+                        <li class="fragment c-list-ui__item">
+                            Node.js and NPM (+ <a href="https://github.com/creationix/nvm">NVM</a> – Node version manager)
+                        </li>
+                        <li class="fragment c-list-ui__item">
+                            <a href="http://gulpjs.com/">Gulp.js</a> and <a href="http://bower.io/">Bower.js</a> as system installs on npm
+                        </li>
+                        <li class="fragment c-list-ui__item">
+                            <strong>There is a install.sh script available</strong></br>
+                            Warning: not extensively tested.
+                        </li>
+                    </ul>
+                </section>
+                <!-- End dependencies -->
+
+                <!-- Jekyll -->
+                <section data-background="#DA2327">
                     <h2>Jekyll</h2>
-                    <p>
-                        Static site generator for faster prototyping. (Ruby gem)
+                    <p class="fragment">
+                        Static site generator for faster/easier prototyping
                     </p>
-                    <p>
-                        Uses liquid as templating language.
+                    <p class="fragment">
+                        Uses liquid as templating language
                     </p>
-                    <ul class="c-list-ui c-list-ui--small u-mT">
+                    <ul class="c-list-ui c-list-ui--small u-mT fragment">
                         <li class="c-list-ui__item">Some resources:</li>
                         <li class="c-list-ui__item">
                             <a href="http://jekyllrb.com/">Official Jekyll site</a>
@@ -106,23 +127,26 @@
 
                 <!-- Gulp workflow -->
                 <section>
-                    <section>
+                    <section data-background="#DA2327">
                         <h2>Gulp workflow</h2>
-                        <p>
-                            Build system using Node.js
+                        <p class="fragment">
+                            Build system
                         </p>
-                        <p>
+                        <p class="fragment">
                             Automate all the things!
                         </p>
+                        <p class="fragment">
+                            Package.json, Gulpfile.js and partials in Gulp folder
+                        </p>
                         <ul class="c-list-ui c-list-ui--small u-mT">
-                            <li class="c-list-ui__item">Available tasks:</li>
-                            <li class="c-list-ui__item">
+                            <li class="c-list-ui__item fragment">Available tasks:</li>
+                            <li class="c-list-ui__item fragment">
                                 <code>gulp</code> : Runs the default tasks (scss, js and jekyll)
                             </li>
-                            <li class="c-list-ui__item">
+                            <li class="c-list-ui__item fragment">
                                 <code>gulp watch</code> : Launch a <a href="http://www.browsersync.io/">browser-sync</a> server and watch files for changes
                             </li>
-                            <li class="c-list-ui__item">
+                            <li class="c-list-ui__item fragment">
                                 <code>gulp svg2png</code> : Converts 'svg' to 'png'
                             </li>
                         </ul>
@@ -150,9 +174,9 @@
 
                 <!-- SCSS Framework -->
                 <section>
-                    <section>
+                    <section data-background="#DA2327">
                         <h2>SCSS Framework</h2>
-                        <p>
+                        <p class="fragment">
                             A framework, not a UI-kit!
                         </p>
                         <ul class="c-list-ui c-list-ui--small u-mT">
@@ -176,7 +200,7 @@
 
                 <!-- ITCSS architecture -->
                 <section>
-                    <section>
+                    <section data-background="#DA2327">
                         <h2>ITCSS architecture</h2>
                         <ul class="c-list-ui c-list-ui--small">
                             <li class="fragment c-list-ui__item">Inverted triangle CSS =  a logical and scalable way to organise selectors</li>
@@ -198,12 +222,12 @@
                     </section>
                     <section>
                         <h2>In use</h2>
-                        <p>
+                        <p class="fragment">
                             SCSS is used to import partials. <br>
                             Filenames start with the layer name.
                         </p>
 
-                        <pre>
+                        <pre class="fragment">
     <code>
     // Example layers
     @import "settings.global";
@@ -225,19 +249,19 @@
                 <section>
                     <section>
                         <h2>Low specificity</h2>
-                        <p>
+                        <p class="fragment">
                             Faster, easier to read, easier to modify and extend
                         </p>
                         <ul class="c-list-ui c-list-ui--small">
                             <li class="fragment c-list-ui__item">Minimal styling of HMTL elements.</li>
                             <li class="fragment c-list-ui__item">Absolutely no styling with ID's!</li>
-                            <li class="fragment c-list-ui__item">Only single-depth classes (no nesting)</li>
+                            <li class="fragment c-list-ui__item">Only single-depth classes (no nesting, no scoping)</li>
                             <li class="fragment c-list-ui__item c-list-ui__item--small">States (eg. 'is-active') are exceptions and can be more specific</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Example</h2>
-                        <div class="u-left">
+                        <div class="u-left fragment">
                             <h4>Scoped styles</h4>
                             <pre>
     <code class="hljs html">/*
@@ -258,7 +282,7 @@
 </ul></code>
                             </pre>
                         </div>
-                        <div class="u-right">
+                        <div class="u-right fragment">
                             <h4>Single depth</h4>
                             <pre>
     <code class="hljs html">/*
@@ -285,7 +309,7 @@
 
                 <!-- Self documenting -->
                 <section>
-                    <section>
+                    <section data-background="#DA2327">
                         <h2>Self documenting classnames</h2>
                         <ul class="c-list-ui c-list-ui--small">
                             <li class="fragment c-list-ui__item">Namespaces</li>
@@ -294,7 +318,7 @@
                     </section>
                     <section>
                         <h2>Namespaces</h2>
-                        <p>
+                        <p class="fragment">
                             Prefix classnames depending their function and location in the architecture
                         </p>
                         <ul class="c-list-ui c-list-ui--small">
@@ -308,7 +332,7 @@
                     </section>
                     <section>
                         <h2>Example</h2>
-                        <p>Objects, components and javascript hook</p>
+                        <p class="fragment">Objects, components and javascript hook</p>
                         <pre>
     <code class="hljs html">
 <ul class="o-list-ui c-nav-main js-nav">
@@ -324,7 +348,10 @@
                         </pre>
                     </section>
                     <section>
-                        <h2>BEM (Block__element--modifier)</h2>
+                        <h2>BEM</h2>
+                        <p>
+                             block__element--modifier
+                        </p>
                         <pre>
     <code class="hljs html">
 /*
@@ -366,7 +393,7 @@
 
                 <!-- Open/closed principle -->
                 <section>
-                    <section>
+                    <section data-background="#DA2327">
                         <h2>Open/closed principle</h2>
                         <p>
                             Add via extension, not modification!
@@ -384,9 +411,9 @@
                 <!-- Practical examples -->
                 <section>
                     <section>
-                        <h2>More examples</h2>
-                        <h4>Simple grid system</h4>
-                        <pre>
+                        <h2>Practical: grid system</h2>
+                        <h4 class="fragment">Simple grid system</h4>
+                        <pre class="fragment">
     <code class="hljs html">
 <div class="o-container">
     <div class="o-grid o-grid--gutter">
@@ -403,9 +430,8 @@
                     </section>
 
                     <section>
-                        <h2>More examples</h2>
                         <h4>Responsive grid system</h4>
-                        <pre>
+                        <pre class="fragment">
     <code class="hljs html">
 <div class="o-container">
     <div class="o-grid o-grid--gutter">
@@ -422,9 +448,8 @@
                     </section>
 
                     <section>
-                        <h2>More examples</h2>
                         <h4>Grid system: push columns</h4>
-                        <pre>
+                        <pre class="fragment">
     <code class="hljs html">
 <div class="o-container">
     <div class="o-grid o-grid--gutter">
@@ -439,7 +464,7 @@
 
                 </section>
 
-                <section>
+                <section data-background="#DA2327">
                     <h2>Roadmap</h2>
                     <ul class="c-list-ui c-list-ui--small">
                         <li class="fragment c-list-ui__item">v0.6: add necessary/missing objects + optimize existing objects</li>
@@ -450,10 +475,13 @@
                     </ul>
                 </section>
 
-                <section>
+                <section data-background="#DA2327">
                     <h2>Thanks!</h2>
                     <p>
                         <a href="https://github.com/getchopstick/chopstick-boilerplate">Fork it, share it, contribute!</a>
+                    </p>
+                    <p>
+                        <a href="https://twitter.com/GetChopstick">@GetChopstick</a>
                     </p>
                 </section>
 
